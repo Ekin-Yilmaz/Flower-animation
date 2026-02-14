@@ -10,6 +10,48 @@
   </head>
 
   <body class="container">
+    <div class="love-overlay">
+    <h1 class="love-text">Sevgililer Günün Kutlu Olsun<br>Prensesim</h1>
+    <p class="love-subtext">(Ekrana dokunmaya devam et...)</p>
+</div>
+
+<style>
+/* Bu CSS'i istersen style.css dosyasına, istersen buraya style etiketiyle ekle */
+.love-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 9999; /* En üstte durmasını sağlar */
+    pointer-events: none; /* ÖNEMLİ: Tıklamaların arkaya geçmesini sağlar */
+    width: 100%;
+}
+
+.love-text {
+    font-family: 'Brush Script MT', cursive, sans-serif; /* El yazısı fontu */
+    color: #fff;
+    font-size: 3rem; /* Telefondan bakılacağı için boyutu */
+    text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4; /* Pembe neon efekt */
+    margin: 0;
+    padding: 0 20px;
+}
+
+.love-subtext {
+    color: #eee;
+    font-family: sans-serif;
+    font-size: 1rem;
+    opacity: 0.8;
+    margin-top: 10px;
+}
+
+/* Mobil uyumluluk için ufak ayar */
+@media only screen and (max-width: 600px) {
+  .love-text {
+    font-size: 2rem;
+  }
+}
+</style>
     <div class="night"></div>
     <div class="flowers">
       <div class="flower flower--1">
